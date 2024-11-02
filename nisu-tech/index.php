@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
     <link rel="shortcut icon" href="../images/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
-<body>
+<body style = "background-color: #DCDCDC">
 <div class="container-fluid">
         <!-- HEADER -->
          <div class="row">

@@ -50,17 +50,17 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                             <table class="table table-bordered table-hover text-nowrap table-sm">
                                 <caption>List of all feedbacks</caption>
                                 <tr> 
-                                    <th>OFFICE</th>
-                                    <th>ORGANIZATION</th>
-                                    <th>AVERAGE</th>
-                                    <th>Q-1</th>
-                                    <th>Q-2</th>
-                                    <th>Q-3</th>
-                                    <th>Q-4</th>
-                                    <th>Q-5</th>
-                                    <th>DATE</th>
-                                    <th>Q-6</th>
-                                    <th>Q-7</th>
+                                    <th><center>OFFICE</th></center>
+                                    <th><center>ORGANIZATION</th></center>
+                                    <th><center>AVERAGE</th></center>
+                                    <th><center>Q-1</th></center>
+                                    <th><center>Q-2</th></center>
+                                    <th><center>Q-3</th></center>
+                                    <th><center>Q-4</th></center>
+                                    <th><center>Q-5</th></center>
+                                    <th><center>DATE</th></center>
+                                    <th><center>Q-6</th></center>
+                                    <th><center>Q-7</th></center>
                                 </tr>
                                 <?php
                                         if($_SESSION['usertype'] == 'Superadmin'){

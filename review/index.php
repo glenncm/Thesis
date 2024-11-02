@@ -63,7 +63,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body style ="background-color: #D3D3D3">
 <div class="container-fluid">
         <!-- HEADER -->
          <div class="row">
