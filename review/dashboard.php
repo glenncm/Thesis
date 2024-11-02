@@ -1,0 +1,137 @@
+<?php 
+session_start();
+// If Session id and name are present proceed to dashboard
+if(isset($_SESSION['id']) && isset($_SESSION['name'])){   
+    include '../dataBaseConn.php';
+    ?>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?php echo ucwords($_SESSION['name'])?> Dashboard</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <style>
+            body{
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .datas{
+                text-align: center;
+                align-content: center;
+            }
+
+            @media screen and (max-width:500px){
+                table{
+                font-size: 10px;
+            }
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        
+            <div class="container-fluid">
+                <!-- HEADER -->
+                <div class="row">
+                    <div class="col-12">
+                        <?php include '../header.php'; ?>
+                    </div>
+                    
+                </div>
+                <!-- SECTION -->
+                 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive p-3 my-3" style="height: 100%;">
+                            <table class="table table-bordered table-hover text-nowrap table-sm">
+                                <caption>List of all feedbacks</caption>
+                                <tr> 
+                                    <th>OFFICE</th>
+                                    <th>ORGANIZATION</th>
+                                    <th>AVERAGE</th>
+                                    <th>Q-1</th>
+                                    <th>Q-2</th>
+                                    <th>Q-3</th>
+                                    <th>Q-4</th>
+                                    <th>Q-5</th>
+                                    <th>DATE</th>
+                                    <th>Q-6</th>
+                                    <th>Q-7</th>
+                                </tr>
+                                <?php
+                                        if($_SESSION['usertype'] == 'Superadmin'){
+                                            $query = "SELECT * FROM feedbacks";
+                                            $results = mysqli_query($conn, $query);
+
+                                            while($row = $results->fetch_assoc()){
+                                                $average = ($row['question_1']+$row['question_2']+$row['question_3']+$row['question_4']+$row['question_5'])/5;
+                                                echo '<tr>
+                                                        <td style="text-wrap:wrap !important">'.$row['office'].'</td> 
+                                                        <td class="datas">'.$row['organization'].'</td> 
+                                                        <td class="datas">'.$average.'</td> 
+                                                        <td class="datas">'.$row['question_1'].'</td> 
+                                                        <td class="datas">'.$row['question_2'].'</td> 
+                                                        <td class="datas">'.$row['question_3'].'</td>
+                                                        <td class="datas">'.$row['question_4'].'</td> 
+                                                        <td class="datas">'.$row['question_5'].'</td>
+                                                        <td class="datas">'.$row['date_submit'].'</td> 
+                                                        <td style="text-wrap:wrap !important">'.$row['question_6'].'</td> 
+                                                        <td style="text-wrap:wrap !important">'.$row['question_7'].'</td> 
+                                                    </tr>';
+                                                }
+                                        }else{
+                                            $department = $_SESSION['department'];
+                                            $query = "SELECT * FROM feedbacks WHERE office='$department'";
+                                            $result = mysqli_query($conn, $query);
+
+                                            while($row = $result->fetch_assoc()){
+                                                $average = ($row['question_1']+$row['question_2']+$row['question_3']+$row['question_4']+$row['question_5'])/5;
+                                                echo '<tr>
+                                                        <td style="text-wrap:wrap !important">'.$row['office'].'</td> 
+                                                        <td class="datas">'.$row['organization'].'</td> 
+                                                        <td class="datas">'.$average.'</td> 
+                                                        <td class="datas">'.$row['question_1'].'</td> 
+                                                        <td class="datas">'.$row['question_2'].'</td> 
+                                                        <td class="datas">'.$row['question_3'].'</td>
+                                                        <td class="datas">'.$row['question_4'].'</td> 
+                                                        <td class="datas">'.$row['question_5'].'</td>
+                                                        <td class="datas">'.$row['date_submit'].'</td> 
+                                                        <td style="text-wrap:wrap !important">'.$row['question_6'].'</td> 
+                                                        <td style="text-wrap:wrap !important">'.$row['question_7'].'</td> 
+                                                    </tr>';
+                                                }
+                                            
+                                        }
+                                    ?>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- FOOTER -->
+                <div class="row">
+                    <div class="col-12">
+                        <?php include '../footer.php'; ?>
+                    </div>
+                </div>
+            </div>
+
+ 
+
+    </body>
+    </html>
+    
+
+<?php
+// If Session id and name are not present, go back to login page
+}else{ 
+    header("Location: index.php");
+    exit();
+}
+
+
+?>
