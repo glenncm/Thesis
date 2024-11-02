@@ -102,6 +102,7 @@ if(isset($_POST['submit'])){
                                 <option value="VPAF(VICE PRESIDENT FOR ADMINISTRATION AND FINANCE)">VPAF(VICE PRESIDENT FOR ADMINISTRATION AND FINANCE)</option>
                                 <option value="VPRE(VICE PRESIDENT FOR RESEARCH AND EXTENSION)">VPRE(VICE PRESIDENT FOR RESEARCH AND EXTENSION)</option>
                                 <option value="KMITT">KMITT</option>
+                                <option value="Superadmin">Superadmin</option>
                     </select>
                     <?php if(isset($_GET['errordepartment'])){?> <p class="error p-0 m-0 text-danger"><?php echo $_GET['errordepartment'];?></p><?php }?>
                     <input class="form-control mt-4 p-1 bg-primary text-white" type="submit" name="submit" value="Submit">
