@@ -64,6 +64,13 @@ if(isset($_POST['username']) && isset($_POST['password'])){
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div class="container-fluid">
+        <!-- HEADER -->
+         <div class="row">
+            <div class="col-12">
+                <?php include '../header.php'; ?>
+            </div> 
+         </div>
     <div class="container d-flex" style="height: 100vh;">
         <div class="row m-auto">
             <div class="text-center w-100">
@@ -89,5 +96,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         alert("Please contact NISU-TECH ADMIN ...")
     }
 </script>
+<div class="container-fluid">
+        <!-- HEADER -->
+         <div class="row">
+            <div class="col-12">
+                <?php include '../footer.php'; ?>
+            </div> 
+         </div>
 </body>
 </html>
