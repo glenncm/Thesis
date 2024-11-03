@@ -112,7 +112,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
 </style>
 </head>
-<body style = "background-color: #D3D3D3">
+<body>
     <div class="container-fluid">
         <!-- HEADER -->
          <div class="row">
