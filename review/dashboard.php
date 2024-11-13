@@ -76,7 +76,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                                     $bg = "bg-danger text-light datas";
                                                 }else if($average > 2.5 && $average <= 3.5){
                                                     $feedback_sentiments = "Neutral";
-                                                    $bg = "bg-warning text-light datas";
+                                                    $bg = "bg-warning text-dark datas";
                                                 }else{
                                                     $feedback_sentiments = "Positive";
                                                     $bg = "bg-success text-light datas";
@@ -109,7 +109,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                                     $bg = "bg-danger text-light datas";
                                                 }else if($average > 2.5 && $average <= 3.5){
                                                     $feedback_sentiments = "Neutral";
-                                                    $bg = "bg-warning text-light datas";
+                                                    $bg = "bg-warning text-dark datas";
                                                 }else{
                                                     $feedback_sentiments = "Positive";
                                                     $bg = "bg-success text-light datas";

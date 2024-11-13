@@ -35,20 +35,20 @@
         }
     }
 </style>
-<div class="row p-5 footer" style="background-color:#35535c;">
+<div class="row p-5 footer" style="background-color:darkblue;">
     <div class="col-12 col-md-4 d-flex justify-content-end">
         <div class="nisu_address">
             <img src="/images/address.png" alt="address" id="addRess">
         </div>
     </div>
-    <div class="col-12 col-md-4 d-flex flex-column pt-2 nisu_details" style="color: #94e0f7;">
+    <div class="col-12 col-md-4 d-flex flex-column pt-2 nisu_details" style="color: white;">
         <span style="font-weight: bold;">Northern Iloilo State University (NISU)</span>
         <span>Estancia, Iloilo 5017</span>
         <span>Email address: infonisu@nisu.com</span>
         <span>Fax #: xxx-xxx-xxx</span>
-        <span>Tel #: xxx-xxx-xxx</span>
+        <span>Phone #: 3970-314</span>
     </div>
-    <div class="col-12 col-md-4 d-flex flex-column pt-2 nisu_details" style="color: #94e0f7;">
+    <div class="col-12 col-md-4 d-flex flex-column pt-2 nisu_details" style="color: white">
         <span>Developers &copy; NISU 2024</span>
         <span>Christian Glenn B. Montaño</span>
         <span>Mary Rose B. Mahigugma-on</span>
