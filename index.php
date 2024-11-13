@@ -124,7 +124,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <div class="row p-1">
             <div class="col-12 col-md-6 mt-5 mx-auto border border-secondary rounded p-3">
                         <form action="index.php" method="POST">
-                            <h3>Client Feedback Questionaire</h3>
+                        <center> <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded"><h2>Client Feedback Questionaire</h2></div></center>
                             <div class="d-flex">
                                 <div class="d-flex align-items-center">
                                     <input type="radio" name="languange" id="English" class="p-0" checked>
@@ -137,7 +137,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             </div>
                             
                             <select name="office" class="form-control mt-5">
-                                <option value="none">Select office</option>
+                                <option value="none">Select Office</option>
                                 <option value="OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)">OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)</option>
                                 <option value="CASHIER OFFICE">CASHIER OFFICE</option>
                                 <option value="REGISTRAR OFFICE">REGISTRAR OFFICE</option>
@@ -153,7 +153,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             </select>
                             <span class="text-danger"><?php echo $office_error; ?></span>
                             <select name="organization" class="form-control mt-5">
-                                <option value="none">Select your organization</option>
+                                <option value="none">Select your Organization</option>
                                 <option value="Citizen">Citizen</option>
                                 <option value="Student">Student</option>
                                 <option value="Alumni">Alumni</option>

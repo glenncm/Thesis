@@ -1,7 +1,6 @@
 <?php
 // INCLUDE DATABASE CONNECTOR
 include '../dataBaseConn.php';
-
 if(isset($_POST['submit'])){
     //Get all the values of input and store in variables
     $name = $_POST['name'];
@@ -15,6 +14,7 @@ if(isset($_POST['submit'])){
         exit();
     }
     else if(empty($username)){
+      
         header("Location: index.php?errorUsername=Username is required !");
         exit();
     }
@@ -62,10 +62,15 @@ if(isset($_POST['submit'])){
     <link rel="shortcut icon" href="../images/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
-<body>
-
-<!-- Note: Please add required and data checking of inputs -->
-
+<body style = "background-color: #DCDCDC">
+<div class="container-fluid">
+        <!-- HEADER -->
+         <div class="row">
+            <div class="col-12">
+                <?php include '../header.php'; ?>
+            </div> 
+         </div>
+ <!-- Note: Please add required and data checking of inputs -->
     <div class="container d-flex" style="height: 100vh;">
         <div class="row  m-auto">
         <h3 class="mx-auto">Add admin</h3>
@@ -110,5 +115,12 @@ if(isset($_POST['submit'])){
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        <!-- HEADER -->
+         <div class="row">
+            <div class="col-12">
+                <?php include '../footer.php'; ?>
+            </div> 
+         </div>
 </body>
 </html>

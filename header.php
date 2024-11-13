@@ -67,7 +67,7 @@
                 <img src="/images/nisu_logo.png" id="nisu_logo" alt="logo" class="my-auto">
                 <div class="banner_nisu d-flex flex-column justify-content-center p-1 p-md-3">
                     <h2 class="m-auto">NORTHERN ILOILO STATE UNIVERSITY</h2>
-                    <h5 class="my-auto"><?php if(isset($_SESSION['id'])){ echo "Department of Education"; }else{echo "Client feedback";}  ?></h5>
+                    <h5 class="my-auto"><?php if(isset($_SESSION['id'])){ echo "Client Feedback"; }else{echo "Client feedback";}  ?></h5>
                 </div>
             </div>
         </div>
