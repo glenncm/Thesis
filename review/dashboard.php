@@ -68,11 +68,23 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                             $results = mysqli_query($conn, $query);
 
                                             while($row = $results->fetch_assoc()){
+                                                $feedback_sentiments;
+                                                $bg;
                                                 $average = ($row['question_1']+$row['question_2']+$row['question_3']+$row['question_4']+$row['question_5'])/5;
+                                                if($average <= 2.5){
+                                                    $feedback_sentiments = "Negative";
+                                                    $bg = "bg-danger text-light datas";
+                                                }else if($average > 2.5 && $average <= 3.5){
+                                                    $feedback_sentiments = "Neutral";
+                                                    $bg = "bg-warning text-light datas";
+                                                }else{
+                                                    $feedback_sentiments = "Positive";
+                                                    $bg = "bg-success text-light datas";
+                                                }
                                                 echo '<tr>
                                                         <td style="text-wrap:wrap !important">'.$row['office'].'</td> 
                                                         <td class="datas">'.$row['organization'].'</td> 
-                                                        <td class="datas">'.$average.'</td> 
+                                                        <td class="'.$bg.'">'.$feedback_sentiments.'</td>
                                                         <td class="datas">'.$row['question_1'].'</td> 
                                                         <td class="datas">'.$row['question_2'].'</td> 
                                                         <td class="datas">'.$row['question_3'].'</td>
@@ -89,11 +101,23 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                             $result = mysqli_query($conn, $query);
 
                                             while($row = $result->fetch_assoc()){
+                                                $feedback_sentiments;
+                                                $bg;
                                                 $average = ($row['question_1']+$row['question_2']+$row['question_3']+$row['question_4']+$row['question_5'])/5;
+                                                if($average <= 2.5){
+                                                    $feedback_sentiments = "Negative";
+                                                    $bg = "bg-danger text-light datas";
+                                                }else if($average > 2.5 && $average <= 3.5){
+                                                    $feedback_sentiments = "Neutral";
+                                                    $bg = "bg-warning text-light datas";
+                                                }else{
+                                                    $feedback_sentiments = "Positive";
+                                                    $bg = "bg-success text-light datas";
+                                                }
                                                 echo '<tr>
                                                         <td style="text-wrap:wrap !important">'.$row['office'].'</td> 
                                                         <td class="datas">'.$row['organization'].'</td> 
-                                                        <td class="datas">'.$average.'</td> 
+                                                        <td class="'.$bg.'">'.$feedback_sentiments.'</td>
                                                         <td class="datas">'.$row['question_1'].'</td> 
                                                         <td class="datas">'.$row['question_2'].'</td> 
                                                         <td class="datas">'.$row['question_3'].'</td>
