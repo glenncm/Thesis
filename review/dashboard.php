@@ -52,7 +52,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                 <tr> 
                                     <th><center>OFFICE</th></center>
                                     <th><center>ORGANIZATION</th></center>
-                                    <th><center>AVERAGE</th></center>
+                                    <th><center>FEEDBACK RATE</th></center>
                                     <th><center>Q-1</th></center>
                                     <th><center>Q-2</th></center>
                                     <th><center>Q-3</th></center>
