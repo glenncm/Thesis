@@ -59,8 +59,8 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                     <th><center>Feedback Score  Q - 4</th></center>
                                     <th><center>Feedback Score  Q - 5</th></center>
                                     <th><center>DATE</th></center>
-                                    <th><center>Q-6</th></center>
-                                    <th><center>Q-7</th></center>
+                                    <th><center>Additional Comment 1</th></center>
+                                    <th><center>Additional Comment 2</th></center>
                                 </tr>
                                 <?php
                                         if($_SESSION['usertype'] == 'Superadmin'){
