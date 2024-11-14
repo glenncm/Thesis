@@ -54,7 +54,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])){
                                     <th><center>ORGANIZATION</th></center>
                                     <th><center>FEEDBACK RATE</th></center>
                                     <th><center>Feedback Score  Q - 1</th></center>
-                                    <th><center>Q-2</th></center>
+                                    <th><center>Feedback Score  Q - 2</th></center>
                                     <th><center>Q-3</th></center>
                                     <th><center>Q-4</th></center>
                                     <th><center>Q-5</th></center>
