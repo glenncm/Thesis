@@ -124,7 +124,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <div class="row p-1">
             <div class="col-12 col-md-6 mt-5 mx-auto border border-secondary rounded p-3">
                         <form action="index.php" method="POST">
-                        <center> <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded"><h2>Client Feedback Questionaire</h2></div></center>
+                        <center> <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded"><h2>Client Feedback Form</h2></div></center>
                             <div class="d-flex">
                                 <div class="d-flex align-items-center">
                                     <input type="radio" name="languange" id="English" class="p-0" checked>
@@ -138,22 +138,22 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                             
                             <select name="office" class="form-control mt-5">
                                 <option value="none">Select Office</option>
-                                <option value="OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)">OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)</option>
-                                <option value="CASHIER OFFICE">CASHIER OFFICE</option>
-                                <option value="REGISTRAR OFFICE">REGISTRAR OFFICE</option>
-                                <option value="RECORDS OFFICE">RECORDS OFFICE</option>
-                                <option value="PROCUREMENT OFFICE">PROCUREMENT OFFICE</option>
-                                <option value="LIBRARY">LIBRARY</option>
-                                <option value="CLINIC OR HEALTH SERVICES">CLINIC OR HEALTH SERVICES</option>
-                                <option value="RESEARCH AND DEVELOPMENT OFFICE">RESEARCH AND DEVELOPMENT OFFICE</option>
-                                <option value="RESEARCH EXTENSION AND SCIENTIFIC PUBLICATION">RESEARCH EXTENSION AND SCIENTIFIC PUBLICATION</option>
-                                <option value="VPAF(VICE PRESIDENT FOR ADMINISTRATION AND FINANCE)">VPAF(VICE PRESIDENT FOR ADMINISTRATION AND FINANCE)</option>
-                                <option value="VPRE(VICE PRESIDENT FOR RESEARCH AND EXTENSION)">VPRE(VICE PRESIDENT FOR RESEARCH AND EXTENSION)</option>
+                                <option value="OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)">OSAS(Office of Student and Acamedic Affairs)</option>
+                                <option value="CASHIER OFFICE">Cashier Office</option>
+                                <option value="REGISTRAR OFFICE">Registrar Office</option>
+                                <option value="RECORDS OFFICE">Records Office</option>
+                                <option value="PROCUREMENT OFFICE">Procurement Office</option>
+                                <option value="LIBRARY">Library</option>
+                                <option value="CLINIC OR HEALTH SERVICES">Clinic Office / Health Services</option>
+                                <option value="RESEARCH AND DEVELOPMENT OFFICE">Research and Development Office</option>
+                                <option value="RESEARCH EXTENSION AND SCIENTIFIC PUBLICATION">Research Eextension and Scientific Publication</option>
+                                <option value="VPAF(VICE PRESIDENT FOR ADMINISTRATION AND FINANCE)">VPAF(Vice President for Administration and Finance)</option>
+                                <option value="VPRE(VICE PRESIDENT FOR RESEARCH AND EXTENSION)">VPRE(Vice President for Research and Extension)</option>
                                 <option value="KMITT">KMITT</option>
                             </select>
                             <span class="text-danger"><?php echo $office_error; ?></span>
                             <select name="organization" class="form-control mt-5">
-                                <option value="none">Select your Organization</option>
+                                <option value="none">Client Type</option>
                                 <option value="Citizen">Citizen</option>
                                 <option value="Student">Student</option>
                                 <option value="Alumni">Alumni</option>
