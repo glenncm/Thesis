@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
                     </select>
                     <?php if(isset($_GET['errorUsertype'])){?> <p class="error p-0 m-0 text-danger"><?php echo $_GET['errorUsertype'];?></p><?php }?>
                     <select name="department" class="form-control mt-4 p-0">
-                        <option value="none">Select Department</option>
+                        <option value="none">Select Client Type</option>
                         <option value="OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)">OSAS(OFFICE OF STUDENT AND ACADEMIC AFFAIRS)</option>
                                 <option value="CASHIER OFFICE">CASHIER OFFICE</option>
                                 <option value="REGISTRAR OFFICE">REGISTRAR OFFICE</option>
