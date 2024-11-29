@@ -124,7 +124,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           <div class="row p-1">
             <div class="col-12 col-md-6 mt-5 mx-auto border border-secondary rounded p-3">
                         <form action="index.php" method="POST">
-                        <center> <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded"><h2>Client Feedback Form</h2></div></center>
+                        <center> <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded"><h2>Client Feedback Questionnaire</h2></div></center>
                             <div class="d-flex">
                                 <div class="d-flex align-items-center">
                                     <input type="radio" name="languange" id="English" class="p-0" checked>
